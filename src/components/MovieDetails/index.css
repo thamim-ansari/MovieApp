@@ -1,0 +1,231 @@
+.movie-details-bg {
+  background-color: #131313;
+  min-height: 100vh;
+}
+.movie-details-banner-container {
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  height: 427px;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+  position: absolute;
+  top: 0px;
+}
+@media screen and (min-width: 768px) {
+  .movie-details-banner-container {
+    height: 501px;
+    background-position: initial;
+  }
+}
+.movie-details-banner-responsive {
+  width: 85%;
+  padding-bottom: 40px;
+}
+.movie-details-banner-title {
+  color: #ffffff;
+  font-family: 'Hanken Grotesk';
+  font-size: 36px;
+  font-weight: 600;
+  line-height: 46.91px;
+  margin: 0px 0px 10px;
+}
+@media screen and (min-width: 768px) {
+  .movie-details-banner-title {
+    font-size: 48px;
+    line-height: 62.54px;
+  }
+}
+.movie-details-banner-info {
+  color: #ffffff;
+  font-family: 'Hanken Grotesk';
+  font-size: 16px;
+  font-weight: 600;
+  line-height: 20.85px;
+  margin: 0px 0px 10px;
+}
+@media screen and (min-width: 768px) {
+  .movie-details-banner-info {
+    font-size: 18px;
+    font-weight: 600;
+    line-height: 23.45px;
+    margin: 0px 0px 15px;
+  }
+}
+.movie-certificate {
+  border: 1px solid #ffffff;
+  border-radius: 2px;
+  padding: 2px 12px;
+  margin: 0px 12px;
+}
+.movie-details-banner-description {
+  color: #ffffff;
+  font-family: 'Hanken Grotesk';
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 20.85px;
+  margin: 0px 0px 25px;
+}
+@media screen and (min-width: 768px) {
+  .movie-details-banner-description {
+    font-size: 20px;
+    line-height: 26.06px;
+    width: 632px;
+  }
+}
+.movie-details-banner-play-btn {
+  color: #171f46;
+  font-family: 'Hanken Grotesk';
+  font-size: 14px;
+  font-weight: 600;
+  line-height: 16px;
+  width: 76px;
+  height: 32px;
+  border-radius: 3px;
+  border: none;
+  outline: none;
+  cursor: pointer;
+}
+@media screen and (min-width: 768px) {
+  .movie-details-banner-play-btn {
+    width: 74px;
+    height: 40px;
+    line-height: 24px;
+  }
+}
+.movie-details-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 20px;
+  margin-top: 360px;
+}
+@media screen and (min-width: 768px) {
+  .movie-details-container {
+    margin-top: 420px;
+  }
+}
+.movie-details-responsive {
+  width: 85%;
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+.movie-details-item-heading {
+  color: #64748b;
+  font-family: 'Hanken Grotesk';
+  font-size: 14px;
+  font-weight: 600;
+  line-height: 18.24px;
+  margin: 0px 0px 10px;
+}
+@media screen and (min-width: 768px) {
+  .movie-details-item-heading {
+    color: #94a3b8;
+    font-size: 18px;
+    line-height: 26px;
+  }
+}
+.movie-details-list {
+  padding-left: 0px;
+  list-style-type: none;
+}
+.movie-details-item {
+  color: #ffffff;
+  font-family: 'Hanken Grotesk';
+  font-size: 12px;
+  font-weight: 400;
+  line-height: 20px;
+  margin: 5px 0px;
+}
+@media screen and (min-width: 768px) {
+  .movie-details-item {
+    font-size: 16px;
+    line-height: 24px;
+  }
+}
+.similar-movies-container {
+  display: flex;
+  justify-content: center;
+}
+.similar-movies-responsive {
+  width: 85%;
+}
+.similar-movie-container-heading {
+  color: #ffffff;
+  font-family: 'Hanken Grotesk';
+  font-size: 20px;
+  font-weight: 600;
+  line-height: 26.06px;
+  margin: 0px;
+}
+@media screen and (min-width: 768px) {
+  .similar-movie-container-heading {
+    font-size: 24px;
+    line-height: 31.27px;
+  }
+}
+.similar-movie-list {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  padding-left: 0px;
+}
+.movie-details-loader-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 70vh;
+}
+.movie-details-failure-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 70vh;
+}
+.movie-details-failure-image {
+  width: 233px;
+  height: 172px;
+}
+@media screen and (min-width: 768px) {
+  .movie-details-failure-image {
+    width: 375px;
+    height: 276px;
+  }
+}
+.movie-details-failure-description {
+  color: #ffffff;
+  font-family: 'Hanken Grotesk';
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 24px;
+  text-align: center;
+}
+@media screen and (min-width: 768px) {
+  .movie-details-failure-description {
+    font-size: 24px;
+    line-height: 31.27px;
+  }
+}
+.movie-details-retry-btn {
+  color: #171f46;
+  width: 107px;
+  height: 40px;
+  font-family: 'Hanken Grotesk';
+  font-size: 14px;
+  font-weight: 600;
+  line-height: 24px;
+  border-radius: 3px;
+  border: none;
+  outline: none;
+  cursor: pointer;
+}
+@media screen and (min-width: 768px) {
+  .movie-details-retry-btn {
+    width: 110px;
+    height: 48px;
+  }
+}

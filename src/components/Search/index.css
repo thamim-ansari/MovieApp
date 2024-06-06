@@ -1,0 +1,109 @@
+.search-bg-container {
+  background-color: #131313;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+.search-movie-container {
+  display: flex;
+  justify-content: center;
+}
+.search-movie-responsive {
+  width: 85%;
+  padding: 0px;
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+.search-result-loader-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 70vh;
+}
+.search-result-failure-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 70vh;
+}
+.search-result-failure-image {
+  width: 233px;
+  height: 172px;
+}
+@media screen and (min-width: 768px) {
+  .search-result-failure-image {
+    width: 375px;
+    height: 276px;
+  }
+}
+.search-result-failure-description {
+  color: #ffffff;
+  font-family: 'Hanken Grotesk';
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 24px;
+  text-align: center;
+}
+@media screen and (min-width: 768px) {
+  .search-result-failure-description {
+    font-size: 24px;
+    line-height: 31.27px;
+  }
+}
+.search-result-retry-btn {
+  color: #171f46;
+  width: 107px;
+  height: 40px;
+  font-family: 'Hanken Grotesk';
+  font-size: 14px;
+  font-weight: 600;
+  line-height: 24px;
+  border-radius: 3px;
+  border: none;
+  outline: none;
+  cursor: pointer;
+}
+@media screen and (min-width: 768px) {
+  .search-result-retry-btn {
+    width: 110px;
+    height: 48px;
+  }
+}
+.no-search-result-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 70vh;
+  flex-grow: 1;
+}
+.no-search-result-image {
+  width: 209.52px;
+  height: 176px;
+  margin-bottom: 10px;
+}
+@media screen and (min-width: 768px) {
+  .no-search-result-image {
+    width: 450px;
+    height: 378px;
+    margin-bottom: 20px;
+  }
+}
+.no-search-result-description {
+  width: 296px;
+  color: #ffffff;
+  font-family: 'Hanken Grotesk';
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 24px;
+  text-align: center;
+}
+@media screen and (min-width: 768px) {
+  .no-search-result-description {
+    width: 565px;
+    font-size: 24px;
+    line-height: 31.27px;
+  }
+}

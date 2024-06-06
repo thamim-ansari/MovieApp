@@ -1,0 +1,34 @@
+.custom-slider .slick-list {
+  display: flex;
+  justify-content: space-between;
+}
+
+.custom-slider .slick-track {
+  display: flex;
+  align-items: stretch;
+}
+
+.custom-slider .slick-slide {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.carousel-image-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.carousel-image {
+  width: 90px;
+  height: 64px;
+  display: block;
+  border-radius: 8px;
+}
+@media screen and (min-width: 768px) {
+  .carousel-image {
+    width: 254px;
+    height: 170px;
+  }
+}

@@ -1,0 +1,56 @@
+.not-found-container {
+  background-image: url('https://res.cloudinary.com/dbu8hb7th/image/upload/v1717391524/fryetehvsucbejuofw5g.png');
+  min-height: 100vh;
+  background-size: cover;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.not-found-heading {
+  color: #ffffff;
+  font-family: 'Hanken Grotesk';
+  font-size: 40px;
+  font-weight: 700;
+  line-height: 52.12px;
+  margin: 0px 0px 10px;
+}
+@media screen and (min-width: 768px) {
+  .not-found-heading {
+    font-size: 96px;
+    line-height: 125.09px;
+    margin: 0px 0px 20px;
+  }
+}
+.not-found-description {
+  color: #ffffff;
+  font-family: 'Hanken Grotesk';
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 20.85px;
+  text-align: center;
+  margin: 0px 0px 20px;
+  width: 296px;
+}
+@media screen and (min-width: 768px) {
+  .not-found-description {
+    width: 610px;
+    font-size: 24px;
+    font-weight: 500;
+    line-height: 31.27px;
+    margin: 0px 0px 25px;
+  }
+}
+.go-home-btn {
+  color: #171f46;
+  font-family: 'Hanken Grotesk';
+  font-size: 14px;
+  font-weight: 600;
+  line-height: 24px;
+  width: 127px;
+  height: 40px;
+  border-radius: 3px;
+  border: none;
+  outline: none;
+  cursor: pointer;
+}

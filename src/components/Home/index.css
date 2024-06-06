@@ -1,0 +1,230 @@
+.home-bg-container {
+  background-color: #131313;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+.home-banner-container {
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  height: 447px;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  top: 0px;
+}
+@media screen and (min-width: 768px) {
+  .home-banner-container {
+    height: 605px;
+    background-position: initial;
+  }
+}
+.home-banner-responsive {
+  width: 85%;
+}
+.home-banner-title {
+  color: #ffffff;
+  font-family: 'Hanken Grotesk';
+  font-size: 36px;
+  font-weight: 600;
+  line-height: 46.91px;
+  margin: 0px 0px 10px;
+}
+@media screen and (min-width: 768px) {
+  .home-banner-title {
+    font-size: 64px;
+    line-height: 62px;
+    margin: 0px 0px 15px;
+  }
+}
+.home-banner-description {
+  color: #ffffff;
+  font-family: 'Hanken Grotesk';
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 20.85px;
+  margin: 0px 0px 25px;
+}
+@media screen and (min-width: 768px) {
+  .home-banner-description {
+    font-size: 20px;
+    line-height: 26.06px;
+    width: 443px;
+  }
+}
+.home-banner-play-btn {
+  color: #171f46;
+  font-family: 'Hanken Grotesk';
+  font-size: 14px;
+  font-weight: 600;
+  line-height: 16px;
+  width: 76px;
+  height: 32px;
+  border-radius: 3px;
+  border: none;
+  outline: none;
+  cursor: pointer;
+}
+@media screen and (min-width: 768px) {
+  .home-banner-play-btn {
+    width: 74px;
+    height: 40px;
+    line-height: 24px;
+  }
+}
+.home-category-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 20px;
+}
+.home-category-container-success {
+  margin-top: 375px;
+}
+@media screen and (min-width: 768px) {
+  .home-category-container-success {
+    margin-top: 530px;
+  }
+}
+.home-category-responsive {
+  width: 85%;
+}
+.home-category-headings {
+  color: #ffffff;
+  font-family: 'Hanken Grotesk';
+  font-size: 16px;
+  font-weight: 600;
+  line-height: 20.85px;
+}
+@media screen and (min-width: 768px) {
+  .home-category-headings {
+    font-size: 24px;
+    line-height: 31.27px;
+  }
+}
+.banner-loader-container {
+  display: flex;
+  justify-content: center;
+}
+
+.banner-loader-responsive {
+  width: 85%;
+  background-color: #0d0d0d;
+  height: 213px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  border-radius: 4px;
+}
+@media screen and (min-width: 768px) {
+  .banner-loader-responsive {
+    height: 466px;
+    border-radius: 8px;
+  }
+}
+.banner-warning-icon {
+  color: #d81f26;
+  font-size: 24px;
+}
+@media screen and (min-width: 768px) {
+  .banner-warning-icon {
+    font-size: 48px;
+  }
+}
+.banner-failure-description {
+  color: #ffffff;
+  font-family: 'Hanken Grotesk';
+  font-size: 12px;
+  font-weight: 500;
+  line-height: 15.64px;
+}
+@media screen and (min-width: 768px) {
+  .banner-failure-description {
+    font-size: 14px;
+    line-height: 18.24px;
+  }
+}
+.banner-try-again-btn {
+  color: #171f46;
+  font-family: 'Hanken Grotesk';
+  font-weight: 600;
+  font-size: 12px;
+  line-height: 24px;
+  width: 77px;
+  height: 28px;
+  border-radius: 3px;
+  border: none;
+  outline: none;
+  cursor: pointer;
+}
+@media screen and (min-width: 768px) {
+  .banner-try-again-btn {
+    width: 94px;
+    height: 32px;
+    font-size: 14px;
+  }
+}
+.category-loader-container {
+  width: 100%;
+  height: 90px;
+  background-color: #0d0d0d;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  border-radius: 4px;
+}
+@media screen and (min-width: 768px) {
+  .category-loader-container {
+    height: 170px;
+    border-radius: 8px;
+  }
+}
+.category-warning-icon {
+  color: #d81f26;
+  font-size: 16px;
+}
+@media screen and (min-width: 768px) {
+  .category-warning-icon {
+    font-size: 32px;
+  }
+}
+.category-failure-description {
+  color: #ffffff;
+  font-family: 'Hanken Grotesk';
+  font-size: 10px;
+  font-weight: 500;
+  line-height: 13.03px;
+}
+@media screen and (min-width: 768px) {
+  .category-failure-description {
+    font-size: 14px;
+    line-height: 18.24px;
+  }
+}
+.category-try-again-btn {
+  color: #171f46;
+  font-family: 'Hanken Grotesk';
+  font-weight: 600;
+  font-size: 10px;
+  line-height: 16px;
+  width: 69px;
+  height: 24px;
+  border-radius: 3px;
+  border: none;
+  outline: none;
+  cursor: pointer;
+}
+@media screen and (min-width: 768px) {
+  .category-try-again-btn {
+    width: 85px;
+    height: 32px;
+    font-size: 12px;
+    font-weight: 600;
+    line-height: 24px;
+  }
+}

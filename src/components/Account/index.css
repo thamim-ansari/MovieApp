@@ -1,0 +1,147 @@
+.account-bg-container {
+  background-color: #131313;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+.account-container {
+  background-color: #ffffff;
+  display: flex;
+  justify-content: center;
+  flex-grow: 1;
+}
+.account-responsive {
+  width: 85%;
+  padding-top: 25px;
+  display: flex;
+  flex-direction: column;
+}
+@media screen and (min-width: 768px) {
+  .account-responsive {
+    padding-top: 40px;
+  }
+}
+.account-heading {
+  color: #131313;
+  font-family: 'Roboto';
+  font-size: 24px;
+  font-weight: 500;
+  line-height: 28.13px;
+  margin: 0px 0px 15px;
+}
+@media screen and (min-width: 768px) {
+  .account-sub-heading {
+    font-family: 'Hanken Grotesk';
+    font-size: 36px;
+    font-weight: 700;
+    line-height: 46.91px;
+  }
+}
+.account-page-line-separator {
+  border: 1px solid #cbd5e1;
+  margin: 0px;
+}
+.membership-info-container {
+  display: flex;
+  align-items: flex-start;
+  padding: 20px 0px;
+}
+.account-sub-heading {
+  color: #94a3b8;
+  font-family: 'Hanken Grotesk';
+  font-size: 18px;
+  font-weight: 600;
+  line-height: 23.45px;
+  margin: 0px;
+}
+@media screen and (min-width: 768px) {
+  .account-sub-heading {
+    font-size: 24px;
+    line-height: 31.27px;
+  }
+}
+.account-info {
+  color: #1e293b;
+  font-family: 'Hanken Grotesk';
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 20.85px;
+  margin: 0px;
+}
+@media screen and (min-width: 768px) {
+  .account-info {
+    font-size: 24px;
+    font-weight: 400;
+    line-height: 31.27px;
+  }
+}
+.account-secure-info {
+  color: #64748b;
+  font-family: 'Hanken Grotesk';
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 20.85px;
+}
+@media screen and (min-width: 768px) {
+  .account-info {
+    font-size: 24px;
+    font-weight: 400;
+    line-height: 31.27px;
+  }
+}
+.account-info-sub {
+  margin-left: 10px;
+}
+@media screen and (min-width: 768px) {
+  .account-info-sub {
+    margin-left: 20px;
+  }
+}
+.membership-info {
+  margin-left: 23px;
+  display: flex;
+  align-items: center;
+}
+@media screen and (min-width: 768px) {
+  .membership-info {
+    margin-left: 33px;
+  }
+}
+.membership-quality {
+  color: #1e293b;
+  border: 1px solid #1e293b;
+  background-color: transparent;
+  font-family: 'Hanken Grotesk';
+  font-size: 14px;
+  font-weight: 600;
+  line-height: 18.24px;
+  border-radius: 2px;
+  padding: 2px 4px 2px 4px;
+  margin: 0px 0px 0px 10px;
+}
+@media screen and (min-width: 768px) {
+  .membership-quality {
+    font-size: 18px;
+    line-height: 23.45px;
+  }
+}
+.logout-btn {
+  align-self: center;
+  color: #ffffff;
+  background-color: #e50914;
+  font-family: 'Hanken Grotesk';
+  font-size: 16px;
+  font-weight: 600;
+  line-height: 24px;
+  padding: 8px 20px 8px 20px;
+  border-radius: 4px;
+  margin-top: 40px;
+  border: none;
+  outline: none;
+  cursor: pointer;
+}
+@media screen and (min-width: 768px) {
+  .logout-btn {
+    margin-top: 50px;
+  }
+}

@@ -1,0 +1,153 @@
+.login-bg-container {
+  background-color: #131313;
+  display: flex;
+  justify-content: center;
+  min-height: 100vh;
+  padding-top: 32px;
+}
+@media screen and (min-width: 768px) {
+  .login-bg-container {
+    background-image: url('https://res.cloudinary.com/dbu8hb7th/image/upload/v1717070675/ynztfupweps1p5wtsu4o.png');
+    background-size: cover;
+    padding-top: 48px;
+  }
+}
+.login-responsive-container {
+  width: 80%;
+}
+.login-logo-img {
+  width: 100px;
+  height: 27px;
+}
+@media screen and (min-width: 768px) {
+  .login-logo-img {
+    width: 180px;
+    height: 52px;
+  }
+}
+.login-container {
+  display: flex;
+  align-items: center;
+  height: 80vh;
+}
+@media screen and (min-width: 768px) {
+  .login-container {
+    justify-content: center;
+  }
+}
+.login-form-container {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+}
+@media screen and (min-width: 768px) {
+  .login-form-container {
+    padding: 64px 45px;
+    width: 456px;
+    background-color: rgba(12, 11, 16, 0.8);
+    border-radius: 8px;
+  }
+}
+
+.login-heading {
+  font-family: 'Roboto';
+  color: #ffffff;
+  font-size: 32px;
+  font-weight: 500;
+  line-height: 40px;
+  text-align: left;
+}
+
+@media screen and (min-width: 768px) {
+  .login-heading {
+    font-family: 'Hanken Grotesk';
+    font-size: 32px;
+    font-weight: 600;
+    line-height: 40px;
+    text-align: center;
+  }
+}
+.login-input-container {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 15px;
+}
+@media screen and (min-width: 768px) {
+  .login-input-container {
+    margin-bottom: 20px;
+  }
+}
+.login-label {
+  color: #ffffff;
+  font-family: 'Roboto';
+  font-size: 12px;
+  font-weight: 700;
+  line-height: 16px;
+  text-align: left;
+  margin-bottom: 8px;
+}
+.login-input {
+  color: #e2e8f0;
+  background-color: #333333;
+  font-family: 'Hanken Grotesk';
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 24px;
+  padding-left: 16px;
+  text-align: left;
+  height: 40px;
+  border-radius: 2px;
+  border: none;
+  outline: none;
+  cursor: pointer;
+}
+.login-error-msg {
+  color: #dc2626;
+  font-family: 'Roboto';
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 16.41px;
+  margin: 10px 0px 0px;
+}
+@media screen and (min-width: 768px) {
+  .login-error-msg {
+    font-family: 'Hanken Grotesk';
+    line-height: 18.24px;
+  }
+}
+.login-button {
+  color: #ffffff;
+  background-color: #e50914;
+  font-family: 'Hanken Grotesk';
+  font-size: 14px;
+  font-weight: 600;
+  line-height: 24px;
+  padding: 8px 20px 8px 20px;
+  border-radius: 4px;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  margin-top: 15px;
+}
+@media screen and (min-width: 768px) {
+  .login-button {
+    color: #f8fafc;
+    border-radius: 8px;
+  }
+}
+.sign-in-btn {
+  display: block;
+}
+@media screen and (min-width: 768px) {
+  .sign-in-btn {
+    display: none;
+  }
+}
+.login-btn {
+  display: none;
+}
+@media screen and (min-width: 768px) {
+  .login-btn {
+    display: block;
+  }
+}
