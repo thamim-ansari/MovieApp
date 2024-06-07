@@ -1,28 +1,27 @@
-import {useState, useContext} from 'react'
+import {useState} from 'react'
 import {useLocation, Link} from 'react-router-dom'
 
 import {HiOutlineSearch} from 'react-icons/hi'
 import {IoIosCloseCircle} from 'react-icons/io'
 
-import SearchContext from '../../context/SearchContext'
-
 import './index.css'
 
-const Header = () => {
+const Header = ({getSearchResult}) => {
   const [isMenubarShown, setMenuBarStatus] = useState(false)
   const [searchInput, setSearchInput] = useState('')
-  const {onSearchInput} = useContext(SearchContext)
   const location = useLocation()
   const pageLocation = location.pathname
 
   const onClickOpenMenu = () => setMenuBarStatus(true)
   const onClickCloseMenu = () => setMenuBarStatus(false)
-  const onChangeSearchInput = event => setSearchInput(event.target.value)
+  const onChangeSearchInput = event => {
+    setSearchInput(event.target.value)
+  }
+
   const onClickSearch = event => {
     event.preventDefault()
     if (event.key === 'Enter' || searchInput.length > 0) {
-      onSearchInput(searchInput)
-      setSearchInput('')
+      getSearchResult(searchInput)
     }
   }
 

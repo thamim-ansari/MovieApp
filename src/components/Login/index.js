@@ -1,6 +1,8 @@
-import {useState} from 'react'
+import {useState, useContext} from 'react'
 import {Redirect} from 'react-router-dom'
 import Cookies from 'js-cookie'
+
+import UserContext from '../../context/UserContext'
 
 import './index.css'
 
@@ -9,6 +11,7 @@ const Login = props => {
   const [password, setPassword] = useState('')
   const [isLoginErrorShown, setIsLoginErrorShown] = useState('')
   const [loginErrorMsg, setLoginErrorMsg] = useState('')
+  const {addUserDetails} = useContext(UserContext)
   const userDetails = {username, password}
 
   const onChangeUsername = event => setUsername(event.target.value)
@@ -17,7 +20,7 @@ const Login = props => {
   const onSubmitSuccess = jwtToken => {
     const {history} = props
     Cookies.set('jwt_token', jwtToken, {expires: 30})
-    Cookies.set('user_details', JSON.stringify(userDetails), {expires: 1})
+    addUserDetails(userDetails)
     history.replace('/')
   }
 

@@ -9,19 +9,19 @@ import Search from './components/Search'
 import Account from './components/Account'
 import NotFound from './components/NotFound'
 import ProtectedRoute from './components/ProtectedRoute'
-import SearchContext from './context/SearchContext'
+import UserContext from './context/UserContext'
 
 import './App.css'
 
 const App = () => {
-  const [searchInput, setSearchInput] = useState('')
-  const onSearchInputData = search => setSearchInput(search)
-
+  const [userData, setUserData] = useState({})
+  const onAddUserData = user => setUserData(user)
+  console.log(userData)
   return (
-    <SearchContext.Provider
+    <UserContext.Provider
       value={{
-        searchInput,
-        onSearchInput: onSearchInputData,
+        userData,
+        addUserDetails: onAddUserData,
       }}
     >
       <Switch>
@@ -34,7 +34,7 @@ const App = () => {
         <Route path="/not-found" component={NotFound} />
         <Redirect to="/not-found" />
       </Switch>
-    </SearchContext.Provider>
+    </UserContext.Provider>
   )
 }
 export default App

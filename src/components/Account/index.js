@@ -1,19 +1,22 @@
+import {useContext} from 'react'
 import Cookies from 'js-cookie'
 
 import Header from '../Header'
 import Footer from '../Footer'
 
+import UserContext from '../../context/UserContext'
+
 import './index.css'
 
 const Account = props => {
   const {history} = props
+  const {userData} = useContext(UserContext)
+  const {username, password} = userData
+
   const onClickLogout = () => {
     Cookies.remove('jwt_token')
-    Cookies.remove('user_details')
     history.replace('/login')
   }
-  const result = Cookies.get('user_details')
-  const parsedResult = result ? JSON.parse(result) : null
 
   return (
     <div className="account-bg-container">
@@ -25,10 +28,12 @@ const Account = props => {
           <div className="membership-info-container">
             <p className="account-sub-heading">Member ship</p>
             <div className="account-info-sub">
-              <p className="account-info">{parsedResult.username}</p>
-              <p className="account-secure-info">
-                {`Password: ${'*'.repeat(parsedResult.password.length)}`}
-              </p>
+              {username && <p className="account-info">{username}</p>}
+              {password && (
+                <p className="account-secure-info">
+                  {`Password: ${'*'.repeat(password.length)}`}
+                </p>
+              )}
             </div>
           </div>
           <hr className="account-page-line-separator" />

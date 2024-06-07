@@ -1,11 +1,10 @@
-import {useState, useEffect, useContext} from 'react'
+import {useState} from 'react'
 import Cookies from 'js-cookie'
 import Loader from 'react-loader-spinner'
 
 import Header from '../Header'
 import MovieItem from '../MovieItem'
 import Footer from '../Footer'
-import SearchContext from '../../context/SearchContext'
 
 import './index.css'
 
@@ -17,19 +16,11 @@ const searchApiStatusConstants = {
 }
 
 const Search = () => {
-  const {searchInput} = useContext(SearchContext)
   const [searchList, setSearchList] = useState([])
+  const [searchInput, setSearchInput] = useState('')
   const [searchApiStatus, setSearchApiStatus] = useState(
     searchApiStatusConstants.initial,
   )
-
-  const jwtToken = Cookies.get('jwt_token')
-  const options = {
-    headers: {
-      Authorization: `Bearer ${jwtToken}`,
-    },
-    method: 'GET',
-  }
 
   const getFormattedMovieData = data => ({
     id: data.id,
@@ -38,9 +29,17 @@ const Search = () => {
     backdropImage: data.backdrop_path,
   })
 
-  const getSearchResult = async () => {
+  const getSearchResult = async input => {
     setSearchApiStatus(searchApiStatusConstants.in_progress)
-    const movieSearchApiUrl = `https://apis.ccbp.in/movies-app/movies-search?search=${searchInput}`
+    setSearchInput(input)
+    const movieSearchApiUrl = `https://apis.ccbp.in/movies-app/movies-search?search=${input}`
+    const jwtToken = Cookies.get('jwt_token')
+    const options = {
+      headers: {
+        Authorization: `Bearer ${jwtToken}`,
+      },
+      method: 'GET',
+    }
     const movieSearchResponse = await fetch(movieSearchApiUrl, options)
     if (movieSearchResponse.ok) {
       const fetchedMovieSearchData = await movieSearchResponse.json()
@@ -53,10 +52,6 @@ const Search = () => {
       setSearchApiStatus(searchApiStatusConstants.failure)
     }
   }
-
-  useEffect(() => {
-    getSearchResult()
-  }, [searchInput])
 
   const onClickSearchRetry = () => getSearchResult()
 
@@ -87,6 +82,7 @@ const Search = () => {
       <Loader type="TailSpin" color="#D81F26" height={50} width={50} />
     </div>
   )
+
   const renderSearchResultFailure = () => (
     <div className="search-result-failure-container">
       <img
@@ -118,10 +114,11 @@ const Search = () => {
         return null
     }
   }
+
   return (
     <div className="search-bg-container">
-      <Header />
-      {renderSearchResultsView()}
+      <Header getSearchResult={getSearchResult} />
+      <div className="search-main-container">{renderSearchResultsView()}</div>
       <Footer />
     </div>
   )
