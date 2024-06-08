@@ -42,7 +42,7 @@ const Popular = () => {
     if (popularMovieResponse.ok) {
       const fetchedPopularMovieData = await popularMovieResponse.json()
       const formattedPopularMovieData = fetchedPopularMovieData.results.map(
-        eachItem => getFormattedMovieData(eachItem),
+        popularMovieData => getFormattedMovieData(popularMovieData),
       )
       setPopularMovieList(formattedPopularMovieData)
       setPopularMovieApiStatus(popularApiStatusConstants.success)
@@ -62,8 +62,8 @@ const Popular = () => {
   const renderPopularMovies = () => (
     <div className="popular-movie-container">
       <ul className="popular-movie-responsive">
-        {popularMovieList.map(eachItem => (
-          <MovieItem key={eachItem.id} moviesData={eachItem} />
+        {popularMovieList.map(popularMovie => (
+          <MovieItem key={popularMovie.id} moviesData={popularMovie} />
         ))}
       </ul>
     </div>

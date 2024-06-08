@@ -1,7 +1,6 @@
 import {useState, useEffect} from 'react'
 import Cookies from 'js-cookie'
 import Loader from 'react-loader-spinner'
-import {IoIosWarning} from 'react-icons/io'
 
 import Header from '../Header'
 import Carousel from '../Carousel'
@@ -74,6 +73,7 @@ const Home = () => {
     const trendingMovieApiResponse = await fetch(trendingMovieApiUrl, options)
     if (trendingMovieApiResponse.ok) {
       const trendingMovieData = await trendingMovieApiResponse.json()
+      console.log(trendingMovieData)
       const formattedTrendingMovieData = trendingMovieData.results.map(
         eachData => getFormattedMovieData(eachData),
       )
@@ -109,12 +109,12 @@ const Home = () => {
 
   const onClickOriginalMovieRetry = () => getOriginalMovieList()
   const onClickTrendingMovieRetry = () => getTrendingMovieList()
-  const onClickTopRatedMovieRetry = () => getTrendingMovieList()
+  const onClickTopRatedMovieRetry = () => getTopRatedMovieList()
 
   const renderHomeBanner = () => (
     <div
       className="home-banner-container"
-      style={{backgroundImage: `url(${randomMovieData.backdropImage})`}}
+      style={{backgroundImage: `url(${randomMovieData.posterImage})`}}
     >
       <div className="home-banner-responsive">
         <h1 className="home-banner-title">{randomMovieData.name}</h1>
@@ -135,7 +135,11 @@ const Home = () => {
   const renderBannerFailure = () => (
     <div testid="loader" className="banner-loader-container">
       <div className="banner-loader-responsive">
-        <IoIosWarning className="category-warning-icon" />
+        <img
+          src="https://res.cloudinary.com/dbu8hb7th/image/upload/v1717852268/nosabx7lzf7og6fo1eta.png"
+          alt="failure view"
+          className="banner-warning-icon"
+        />
         <p className="banner-failure-description">
           Something went wrong. Please try again
         </p>
@@ -169,7 +173,11 @@ const Home = () => {
   )
   const renderTrendingMovieFailure = () => (
     <div testid="loader" className="category-loader-container">
-      <IoIosWarning className="category-warning-icon" />
+      <img
+        src="https://res.cloudinary.com/dbu8hb7th/image/upload/v1717852268/nosabx7lzf7og6fo1eta.png"
+        alt="failure view"
+        className="category-warning-icon"
+      />
       <p className="category-failure-description">
         Something went wrong. Please try again
       </p>
@@ -199,7 +207,11 @@ const Home = () => {
   )
   const renderOriginalsMovieFailure = () => (
     <div testid="loader" className="category-loader-container">
-      <IoIosWarning className="category-warning-icon" />
+      <img
+        src="https://res.cloudinary.com/dbu8hb7th/image/upload/v1717852268/nosabx7lzf7og6fo1eta.png"
+        alt="failure view"
+        className="category-warning-icon"
+      />
       <p className="category-failure-description">
         Something went wrong. Please try again
       </p>
@@ -229,7 +241,11 @@ const Home = () => {
 
   const renderTopRatedMoviesFailure = () => (
     <div testid="loader" className="category-loader-container">
-      <IoIosWarning className="category-warning-icon" />
+      <img
+        src="https://res.cloudinary.com/dbu8hb7th/image/upload/v1717852268/nosabx7lzf7og6fo1eta.png"
+        alt="failure view"
+        className="category-warning-icon"
+      />
       <p className="category-failure-description">
         Something went wrong. Please try again
       </p>

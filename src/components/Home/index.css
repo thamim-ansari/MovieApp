@@ -128,11 +128,11 @@
 }
 .banner-warning-icon {
   color: #d81f26;
-  font-size: 24px;
+  width: 24px;
 }
 @media screen and (min-width: 768px) {
   .banner-warning-icon {
-    font-size: 48px;
+    width: 48px;
   }
 }
 .banner-failure-description {
@@ -186,11 +186,11 @@
 }
 .category-warning-icon {
   color: #d81f26;
-  font-size: 16px;
+  width: 16px;
 }
 @media screen and (min-width: 768px) {
   .category-warning-icon {
-    font-size: 32px;
+    width: 32px;
   }
 }
 .category-failure-description {

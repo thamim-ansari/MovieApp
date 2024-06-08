@@ -17,7 +17,8 @@ const Account = props => {
     Cookies.remove('jwt_token')
     history.replace('/login')
   }
-
+  const usernameValue = username !== undefined ? username : ''
+  const passwordValue = password !== undefined ? password : ''
   return (
     <div className="account-bg-container">
       <Header />
@@ -28,9 +29,9 @@ const Account = props => {
           <div className="membership-info-container">
             <p className="account-sub-heading">Member ship</p>
             <div className="account-info-sub">
-              <p className="account-info">{username}</p>
+              <p className="account-info">{usernameValue}</p>
               <p className="account-secure-info">
-                Password: {`${'*'.repeat(password.length)}`}
+                Password: {'*'.repeat(passwordValue.length)}
               </p>
             </div>
           </div>

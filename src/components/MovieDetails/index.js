@@ -103,11 +103,13 @@ const MovieDetails = props => {
     >
       <div className="movie-details-banner-responsive">
         <h1 className="movie-details-banner-title">{movieDetailsData.name}</h1>
-        <p className="movie-details-banner-info">
-          <span>{movieRuntime}</span>
-          <span className="movie-certificate">{movieCertificate}</span>
-          <span>{releasedYear}</span>
-        </p>
+        <div className="movie-details-banner-info-container">
+          <p className="movie-details-banner-info">{movieRuntime}</p>
+          <p className="movie-details-banner-info movie-certificate">
+            {movieCertificate}
+          </p>
+          <p className="movie-details-banner-info">{releasedYear}</p>
+        </div>
         <p className="movie-details-banner-description">
           {movieDetailsData.overview}
         </p>
@@ -125,7 +127,7 @@ const MovieDetails = props => {
           <ul className="movie-details-list">
             {movieDetailsData.genres.map(genre => (
               <li key={genre.id} className="movie-details-item">
-                {genre.name}
+                <p className="movie-details-genre-and-language">{genre.name}</p>
               </li>
             ))}
           </ul>
@@ -135,7 +137,9 @@ const MovieDetails = props => {
           <ul className="movie-details-list">
             {movieDetailsData.spokenLanguages.map(language => (
               <li key={language.id} className="movie-details-item">
-                {language.english_name}
+                <p className="movie-details-genre-and-language">
+                  {language.english_name}
+                </p>
               </li>
             ))}
           </ul>

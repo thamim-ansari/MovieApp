@@ -59,8 +59,8 @@ const Search = () => {
     searchList.length > 0 ? (
       <div className="search-movie-container">
         <ul className="search-movie-responsive">
-          {searchList.map(eachItem => (
-            <MovieItem key={eachItem.id} moviesData={eachItem} />
+          {searchList.map(searchData => (
+            <MovieItem key={searchData.id} moviesData={searchData} />
           ))}
         </ul>
       </div>
@@ -68,7 +68,7 @@ const Search = () => {
       <div className="no-search-result-container">
         <img
           src="https://res.cloudinary.com/dbu8hb7th/image/upload/v1717595070/yapql2obtefc9isipmji.png"
-          alt="no search result"
+          alt="no movies"
           className="no-search-result-image"
         />
         <p className="no-search-result-description">
