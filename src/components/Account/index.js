@@ -28,12 +28,10 @@ const Account = props => {
           <div className="membership-info-container">
             <p className="account-sub-heading">Member ship</p>
             <div className="account-info-sub">
-              {username && <p className="account-info">{username}</p>}
-              {password && (
-                <p className="account-secure-info">
-                  {`Password: ${'*'.repeat(password.length)}`}
-                </p>
-              )}
+              <p className="account-info">{username}</p>
+              <p className="account-secure-info">
+                Password: {`${'*'.repeat(password.length)}`}
+              </p>
             </div>
           </div>
           <hr className="account-page-line-separator" />
