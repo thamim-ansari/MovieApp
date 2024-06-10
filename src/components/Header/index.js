@@ -35,17 +35,23 @@ const Header = ({getSearchResult}) => {
           className="search-input"
           onChange={onChangeSearchInput}
         />
-        <button type="button" className="search-btn" onClick={onClickSearch}>
-          <HiOutlineSearch className="search-page-icon" testid="searchButton" />
+        <button
+          type="button"
+          className="search-btn"
+          onClick={onClickSearch}
+          testid="searchButton"
+        >
+          <HiOutlineSearch className="search-page-icon" />
         </button>
       </form>
     ) : (
       <Link to="/search">
-        <button type="button" className="header-search-btn">
-          <HiOutlineSearch
-            className="header-search-icon"
-            testid="searchButton"
-          />
+        <button
+          type="button"
+          className="header-search-btn"
+          testid="searchButton"
+        >
+          <HiOutlineSearch className="header-search-icon" />
         </button>
       </Link>
     )
