@@ -53,7 +53,7 @@ const Search = () => {
     }
   }
 
-  const onClickSearchRetry = () => getSearchResult()
+  const onClickSearchRetry = () => getSearchResult(searchInput)
 
   const renderSearchResult = () =>
     searchList.length > 0 ? (
